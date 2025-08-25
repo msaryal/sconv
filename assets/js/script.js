@@ -9,18 +9,10 @@ let usd_kzt_currency = 539;   // 1 usd = usd_kzt_currency KZT
 const tableBtn = document.getElementById('table-btn');
 const input = document.getElementById('input');
 const quantityInput = document.getElementById('quantity');
+const calculateBtn = document.getElementById('convert-btn');
 const resultKzt = document.getElementById('convert-result-kzt');
 const resultRub = document.getElementById('convert-result-rub');
 const resultUsd = document.getElementById('convert-result-usd');
-
-tableBtn.addEventListener('click', function(){
-    const table = document.getElementById('table');
-
-    table.classList.toggle('table-opened');
-});
-
-input.addEventListener('change', calculate);
-quantityInput.addEventListener('change', calculate);
 
 function calculate()
 {
@@ -73,3 +65,13 @@ function calculate()
     resultRub.innerHTML = `${printRub} &#8381; x ${quantity} = ${printTotalRub} &#8381;`;
     resultUsd.innerHTML = `${printUsd} &#36; x ${quantity} = ${printTotalUsd} &#36;`;
 }
+
+tableBtn.addEventListener('click', function(){
+    const table = document.getElementById('table');
+
+    table.classList.toggle('table-opened');
+});
+
+input.addEventListener('change', calculate);
+quantityInput.addEventListener('change', calculate);
+calculateBtn.addEventListener('click', calculate);
