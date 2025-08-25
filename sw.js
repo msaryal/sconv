@@ -1,5 +1,4 @@
-const CACHE = 'network-or-cache-v1';
-const timeout = 400;
+const CACHE = 'network-or-cache-v2';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(

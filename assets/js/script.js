@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sconv//sw.js');
+    navigator.serviceWorker.register('/sconv/sw.js');
 }
 
 const tableBtn = document.getElementById('table-btn');
