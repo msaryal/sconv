@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>sconv</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sconv">
+    <link rel="icon" type="image/png" href="/assets/ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/ico/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ico/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="sconv" />
+    <link rel="manifest" href="/assets/ico/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <button type="button" class="table-btn" id="table-btn">Показать таблицу</button>
+            <table class="table" id="table" cellspacing="0" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>KRW</th>
+                        <th>KZT</th>
+                        <th>RUB</th>
+                        <th>USD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1 000 &#8361;</th>
+                        <td>380 &#8376;</td>
+                        <td>59 &#8381;</td>
+                        <td>1 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>10 000 &#8361;</th>
+                        <td>3 800 &#8376;</td>
+                        <td>590 &#8381;</td>
+                        <td>7 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>20 000 &#8361;</th>
+                        <td>7 600 &#8376;</td>
+                        <td>1 080 &#8381;</td>
+                        <td>14 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>30 000 &#8361;</th>
+                        <td>11 400 &#8376;</td>
+                        <td>1 670 &#8381;</td>
+                        <td>21 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>40 000 &#8361;</th>
+                        <td>15 200 &#8376;</td>
+                        <td>2 160 &#8381;</td>
+                        <td>28 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>50 000 &#8361;</th>
+                        <td>19 000 &#8376;</td>
+                        <td>2 950 &#8381;</td>
+                        <td>35 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>100 000 &#8361;</th>
+                        <td>38 000 &#8376;</td>
+                        <td>5 900 &#8381;</td>
+                        <td>70 &#36;</td>
+                    </tr>
+                    <tr>
+                        <th>1 000 000 &#8361;</th>
+                        <td>380 000 &#8376;</td>
+                        <td>59 000 &#8381;</td>
+                        <td>700 &#36;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="convert">
+                <div class="convert__grid">
+                    <div>
+                        <label for="input">Корейские воны:</label>
+                        <input type="number" class="input" id="input">
+                    </div>
+                    <div>
+                        <label for="quantity">Количество:</label>
+                        <input type="number" class="input" id="quantity" value="1">
+                    </div>
+                    <span class="convert__currency">&#8361;</span>
+                </div>
+                <div class="convert__result">
+                    <div class="convert-result__item" id="convert-result-kzt"></div>
+                    <div class="convert-result__item" id="convert-result-rub"></div>
+                    <div class="convert-result__item" id="convert-result-usd"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

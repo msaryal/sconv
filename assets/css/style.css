@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.3;
+    background-color: #fcfcfc;
+}
+
+button {
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.3;    
+}
+
+.container {
+    max-width: 760px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.table-btn {
+    display: block;
+    width: min(100%, 400px);
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #127450;
+    color: #fff;
+}
+
+.table {
+    display: none;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+}
+
+.table-opened {
+    display: table;
+}
+
+.table,
+.table th,
+.table td {
+    border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.convert {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    width: min(100%, 400px);
+}
+
+.convert__grid {
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    align-items: end;
+    gap: 20px;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.convert__currency {
+    margin-bottom: 6px;
+}
+
+.convert__result {
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .table {
+        width: 100%;
+    }
+}
