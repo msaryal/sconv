@@ -13,6 +13,7 @@ self.addEventListener('install', (event) => {
                 '/sconv/assets/ico/favicon.ico',
                 '/sconv/assets/ico/apple-touch-icon.png',
                 '/sconv/assets/ico/site.webmanifest',
+                '/sconv/assets/css/style.css',
                 '/sconv/assets/js/script.js',
                 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'
             ])
