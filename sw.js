@@ -1,4 +1,4 @@
-const CACHE = 'network-or-cache-v2';
+const CACHE = 'network-or-cache-v3';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
