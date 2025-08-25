@@ -8,12 +8,12 @@ self.addEventListener('install', (event) => {
             .then((cache) => cache.addAll([
                 '/',
                 '/index.html',
-                '/assets/ico/favicon-96x96.png',
-                '/assets/ico/favicon.svg',
-                '/assets/ico/favicon.ico',
-                '/assets/ico/apple-touch-icon.png',
-                '/assets/ico/site.webmanifest',
-                '/assets/js/script.js',
+                '/sconv/assets/ico/favicon-96x96.png',
+                '/sconv/assets/ico/favicon.svg',
+                '/sconv/assets/ico/favicon.ico',
+                '/sconv/assets/ico/apple-touch-icon.png',
+                '/sconv/assets/ico/site.webmanifest',
+                '/sconv/assets/js/script.js',
                 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'
             ])
         ));
