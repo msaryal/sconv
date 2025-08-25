@@ -6,8 +6,8 @@ self.addEventListener('install', (event) => {
         caches
             .open(CACHE)
             .then((cache) => cache.addAll([
-                '/',
-                '/index.html',
+                '/sconv/',
+                '/sconv/index.html',
                 '/sconv/assets/ico/favicon-96x96.png',
                 '/sconv/assets/ico/favicon.svg',
                 '/sconv/assets/ico/favicon.ico',
