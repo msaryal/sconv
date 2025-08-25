@@ -44,9 +44,9 @@ function calculateTable()
         const printRub = rub.toLocaleString('ru');
         const printUsd = usd.toLocaleString('ru');
 
-        row.querySelector('td:nth-child(2) span').innerHTML = `${printKzt} &#8376;`;
-        row.querySelector('td:nth-child(3) span').innerHTML = `${printRub} &#8381;`;
-        row.querySelector('td:nth-child(4) span').innerHTML = `${printUsd} &#36;`;
+        row.querySelector('td:nth-child(2) span').innerHTML = printKzt;
+        row.querySelector('td:nth-child(3) span').innerHTML = printRub;
+        row.querySelector('td:nth-child(4) span').innerHTML = printUsd;
     });
 }
 
