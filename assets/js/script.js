@@ -3,8 +3,8 @@ if ('serviceWorker' in navigator) {
 }
 
 let won_kzt_currency = 0.380; // 1 won = kzt_won_currency KZT
-let rub_kzt_currency = 6.46;  // 1 rub = rub_kzt_currency KZT
-let usd_kzt_currency = 539;   // 1 usd = usd_kzt_currency KZT
+let rub_kzt_currency = 6.5;  // 1 rub = rub_kzt_currency KZT
+let usd_kzt_currency = 540;   // 1 usd = usd_kzt_currency KZT
 
 const tableBtn = document.getElementById('table-btn');
 const input = document.getElementById('input');
