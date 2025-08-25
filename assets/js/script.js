@@ -7,12 +7,48 @@ let rub_kzt_currency = 6.5;  // 1 rub = rub_kzt_currency KZT
 let usd_kzt_currency = 540;   // 1 usd = usd_kzt_currency KZT
 
 const tableBtn = document.getElementById('table-btn');
+const table = document.getElementById('table');
 const input = document.getElementById('input');
 const quantityInput = document.getElementById('quantity');
 const calculateBtn = document.getElementById('convert-btn');
 const resultKzt = document.getElementById('convert-result-kzt');
 const resultRub = document.getElementById('convert-result-rub');
 const resultUsd = document.getElementById('convert-result-usd');
+
+function calculateTable()
+{
+    const won_kzt_currency_input = +document.getElementById('won_kzt_currency').value;
+    const rub_kzt_currency_input = +document.getElementById('rub_kzt_currency').value;
+    const usd_kzt_currency_input = +document.getElementById('usd_kzt_currency').value;
+
+    if(won_kzt_currency_input) {
+        won_kzt_currency = won_kzt_currency_input;
+    }
+
+    if(rub_kzt_currency_input) {
+        rub_kzt_currency = rub_kzt_currency_input;
+    }
+
+    if(usd_kzt_currency_input) {
+        usd_kzt_currency = usd_kzt_currency_input;
+    }
+
+    table.querySelectorAll('tbody tr').forEach(row => {
+        let won = +row.querySelector('th strong').innerHTML.replaceAll(' ','');
+
+        const kzt = Math.ceil(won * won_kzt_currency);
+        const rub = Math.ceil(kzt / rub_kzt_currency);
+        const usd = Math.ceil(kzt / usd_kzt_currency);
+
+        const printKzt = kzt.toLocaleString('ru');
+        const printRub = rub.toLocaleString('ru');
+        const printUsd = usd.toLocaleString('ru');
+
+        row.querySelector('td:nth-child(2) span').innerHTML = `${printKzt} &#8376;`;
+        row.querySelector('td:nth-child(3) span').innerHTML = `${printRub} &#8381;`;
+        row.querySelector('td:nth-child(4) span').innerHTML = `${printUsd} &#36;`;
+    });
+}
 
 function calculate()
 {
@@ -27,8 +63,6 @@ function calculate()
     const won_kzt_currency_input = +document.getElementById('won_kzt_currency').value;
     const rub_kzt_currency_input = +document.getElementById('rub_kzt_currency').value;
     const usd_kzt_currency_input = +document.getElementById('usd_kzt_currency').value;
-
-    console.log(won_kzt_currency_input, rub_kzt_currency_input, usd_kzt_currency_input);
 
     if(won_kzt_currency_input) {
         won_kzt_currency = won_kzt_currency_input;
@@ -67,11 +101,15 @@ function calculate()
 }
 
 tableBtn.addEventListener('click', function(){
-    const table = document.getElementById('table');
-
     table.classList.toggle('table-opened');
 });
 
 input.addEventListener('change', calculate);
 quantityInput.addEventListener('change', calculate);
 calculateBtn.addEventListener('click', calculate);
+
+document.getElementById('won_kzt_currency').addEventListener('change', calculateTable);
+document.getElementById('rub_kzt_currency').addEventListener('change', calculateTable);
+document.getElementById('usd_kzt_currency').addEventListener('change', calculateTable);
+
+calculateTable();

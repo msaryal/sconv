@@ -19,18 +19,25 @@
 <body>
     <main class="main">
         <div class="container">
+            <div class="currencies">
+                <div>
+                    <label for="won_kzt_currency">1 won - kzt</label>
+                    <input type="number" inputmode="numeric" class="input" id="won_kzt_currency" value="0.380">
+                </div>
+                <div>
+                    <label for="won_kzt_currency">1 rub - kzt</label>
+                    <input type="number" inputmode="numeric" class="input" id="rub_kzt_currency" value="6.5">
+                </div>
+                <div>
+                    <label for="won_kzt_currency">1 usd - kzt</label>
+                    <input type="number" inputmode="numeric" class="input" id="usd_kzt_currency" value="540">
+                </div>
+            </div>
+
             <button type="button" class="table-btn" id="table-btn">Показать таблицу</button>
+            
             <table class="table" id="table" cellspacing="0" cellpadding="5">
                 <thead>
-                    <tr>
-                        <td colspan="4">
-                            <div class="table__currencies">
-                                <div class="table__currency">1 &#8361; = 0.380 &#8376;</div>
-                                <div class="table__currency">1 &#8381; = 6.5 &#8376;</div>
-                                <div class="table__currency">1 &#36; = 540 &#8376;</div>
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <th>KRW</th>
                         <th>KZT</th>
@@ -40,71 +47,57 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>1 000 &#8361;</th>
-                        <td>380 &#8376;</td>
-                        <td>59 &#8381;</td>
-                        <td>1 &#36;</td>
+                        <th><strong>1 000</strong> &#8361;</th>
+                        <td><span>380</span> &#8376;</td>
+                        <td><span>59</span> &#8381;</td>
+                        <td><span>1</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>10 000 &#8361;</th>
-                        <td>3 800 &#8376;</td>
-                        <td>585 &#8381;</td>
-                        <td>7 &#36;</td>
+                        <th><strong>10 000</strong> &#8361;</th>
+                        <td><span>3 800</span> &#8376;</td>
+                        <td><span>585</span> &#8381;</td>
+                        <td><span>7</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>20 000 &#8361;</th>
-                        <td>7 600 &#8376;</td>
-                        <td>1 170 &#8381;</td>
-                        <td>14 &#36;</td>
+                        <th><strong>20 000</strong> &#8361;</th>
+                        <td><span>7 600</span> &#8376;</td>
+                        <td><span>1 170</span> &#8381;</td>
+                        <td><span>14</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>30 000 &#8361;</th>
-                        <td>11 400 &#8376;</td>
-                        <td>1 754 &#8381;</td>
-                        <td>21 &#36;</td>
+                        <th><strong>30 000</strong> &#8361;</th>
+                        <td><span>11 400</span> &#8376;</td>
+                        <td><span>1 754</span> &#8381;</td>
+                        <td><span>21</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>40 000 &#8361;</th>
-                        <td>15 200 &#8376;</td>
-                        <td>2 339 &#8381;</td>
-                        <td>28 &#36;</td>
+                        <th><strong>40 000</strong> &#8361;</th>
+                        <td><span>15 200</span> &#8376;</td>
+                        <td><span>2 339</span> &#8381;</td>
+                        <td><span>28</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>50 000 &#8361;</th>
-                        <td>19 000 &#8376;</td>
-                        <td>2 923 &#8381;</td>
-                        <td>35 &#36;</td>
+                        <th><strong>50 000</strong> &#8361;</th>
+                        <td><span>19 000</span> &#8376;</td>
+                        <td><span>2 923</span> &#8381;</td>
+                        <td><span>35</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>100 000 &#8361;</th>
-                        <td>38 000 &#8376;</td>
-                        <td>5 856 &#8381;</td>
-                        <td>70 &#36;</td>
+                        <th><strong>100 000</strong> &#8361;</th>
+                        <td><span>38 000</span> &#8376;</td>
+                        <td><span>5 856</span> &#8381;</td>
+                        <td><span>70</span> &#36;</td>
                     </tr>
                     <tr>
-                        <th>1 000 000 &#8361;</th>
-                        <td>380 000 &#8376;</td>
-                        <td>58 462 &#8381;</td>
-                        <td>704 &#36;</td>
+                        <th><strong>1 000 000</strong> &#8361;</th>
+                        <td><span>380 000</span> &#8376;</td>
+                        <td><span>58 462</span> &#8381;</td>
+                        <td><span>704</span> &#36;</td>
                     </tr>
                 </tbody>
             </table>
 
             <div class="convert">
-                <div class="currencies">
-                    <div>
-                        <label for="won_kzt_currency">1 won - kzt</label>
-                        <input type="number" inputmode="numeric" class="input" id="won_kzt_currency" value="0.380">
-                    </div>
-                    <div>
-                        <label for="won_kzt_currency">1 rub - kzt</label>
-                        <input type="number" inputmode="numeric" class="input" id="rub_kzt_currency" value="6.5">
-                    </div>
-                    <div>
-                        <label for="won_kzt_currency">1 usd - kzt</label>
-                        <input type="number" inputmode="numeric" class="input" id="usd_kzt_currency" value="540">
-                    </div>
-                </div>
                 <div class="convert__grid">
                     <div>
                         <label for="input">Корейские воны:</label>
