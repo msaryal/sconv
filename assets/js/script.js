@@ -6,9 +6,6 @@ const kzt_won_currency = 0.380; // 1 won = kzt_won_currency KZT
 const rub_kzt_currency = 6.46;  // 1 rub = rub_kzt_currency KZT
 const usd_kzt_currency = 539;   // 1 usd = usd_kzt_currency KZT
 
-const rub_won_k = kzt_won_currency / rub_kzt_currency;
-const usd_kzt_k = kzt_won_currency / usd_kzt_currency;
-
 const tableBtn = document.getElementById('table-btn');
 const input = document.getElementById('input');
 const quantityInput = document.getElementById('quantity');
@@ -39,8 +36,8 @@ function calculate()
     const quantity = parseFloat(quantityInput.value);
 
     const kzt = won * kzt_won_currency;
-    const rub = kzt * rub_won_k;
-    const usd = kzt * usd_kzt_k;
+    const rub = Math.round(kzt / rub_kzt_currency * 100) / 100;
+    const usd = Math.round(kzt / usd_kzt_currency * 100) / 100;
 
     const totalKzt = kzt * quantity;
     const totalRub= rub * quantity;
